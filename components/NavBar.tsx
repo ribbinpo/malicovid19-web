@@ -7,15 +7,15 @@ const NavBar = () =>{
                     <a className="text-xl text-black" href="#">
                         <span>MaliCovid19</span>
                     </a>
-                    <ul className="flex flex-row ml-5 mr-auto ">
-                        <li className="px-3 py-1 border-b-2 border-white hover:border-b-indigo-300 cursor-pointer select-none"><Link href="/dashboard"><a>Dashboard</a></Link></li>
-                        <li className="px-3 py-1 border-b-2 border-white hover:border-b-indigo-300 cursor-pointer select-none">Model</li>
-                        <li className="px-3 py-1 border-b-2 border-white hover:border-b-indigo-300 cursor-pointer select-none">About</li>
-                        <li className="px-3 py-1 border-b-2 border-white hover:border-b-indigo-300 cursor-pointer select-none">Contact</li>
-                    </ul>
+
                 </div>
                 <div className="">
-                    LOGIN | SIGNUP
+                    <ul className="flex flex-row ml-5 mr-auto ">
+                        <li className="px-5 py-1 border-b-2 border-white hover:border-b-indigo-300 hover:text-indigo-500 cursor-pointer select-none"><Link href="/dashboard"><a>Dashboard</a></Link></li>
+                        <li className="px-5 py-1 border-b-2 border-white hover:border-b-indigo-300 hover:text-indigo-500 cursor-pointer select-none">Model</li>
+                        <li className="px-5 py-1 border-b-2 border-white hover:border-b-indigo-300 hover:text-indigo-500 cursor-pointer select-none">About</li>
+                        <li className="px-5 py-1 border-b-2 border-white hover:border-b-indigo-300 hover:text-indigo-500 cursor-pointer select-none">Contact</li>
+                    </ul>
                 </div>
             </div>
         </nav>
