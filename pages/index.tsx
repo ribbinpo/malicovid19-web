@@ -73,17 +73,17 @@ const baba: NextPage = ({data}:any) =>{
             id: "basic-bar"
           },
           xaxis: {
-            categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998]
+            categories: data.data.date
           }
         },
         series: [
           {
-            name: "series-1",
-            data: [30, 40, 45, 50, 49, 60, 70, 91]
+            name: "Real",
+            data: data.data.real
           },
           {
-            name: "series-2",
-            data: [40, 50, 60, 70, 80, 90, 100, 111]
+            name: "Forecast",
+            data: data.data.forecast
           },
         ]
     };
@@ -91,7 +91,7 @@ const baba: NextPage = ({data}:any) =>{
         <div className="flex flex-col h-screen"> 
             <div className="flex-grow px-2 pt-2">
                 <div className=" bg-zinc-50 rounded-lg h-screen text-center px-3">
-                    <div className="text-right text-xs pr-5 mb-2">Lastest Update: 12/04/2022</div>
+                    <div className="text-right text-xs pr-5 mb-2">Lastest Update: {data.date}</div>
                     <div className="grid grid-cols-3 gap-3 mb-2">
                         <div className="bg-white p-5 rounded-lg">01 TODAY CASE</div>
                         <div className="bg-white p-5 rounded-lg">02 TOMORROW CASE</div>
@@ -119,9 +119,9 @@ const baba: NextPage = ({data}:any) =>{
 }
 
 export async function getServerSideProps(){
-    const res = await fetch("https://line-pcord.herokuapp.com/get_predict")  
+    const res = await fetch("http://157.245.53.86/api/predict")  
     const data = await res.json()
-    console.log(data)
+    // console.log(data.data.date)
     return {props:{data}}  
 }
 

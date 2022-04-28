@@ -1,3 +1,6 @@
+import ecoSystemImage from "../public/EcoSystem.png"
+import Image from 'next/image'
+
 const about = ()=>{
     return(
         <div className="bg-zinc-50 rounded-lg h-screen text-center mx-3 mt-3 p-3">
@@ -10,7 +13,13 @@ const about = ()=>{
                 </p>
             </div>
             <div className="bg-white shadow-sm rounded-md p-5">
-                Ecosystem Image
+                <Image
+                src={ecoSystemImage}
+                alt="Picture of the author"
+                // width={500}
+                // height={500}
+                quality={100}
+                />
             </div>
         </div>
     );

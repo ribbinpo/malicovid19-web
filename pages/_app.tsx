@@ -5,10 +5,10 @@ import Footer from "../components/Footer"
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-  <div className="bg-slate-100">
+  <div className="bg-slate-100 container-fluid">
     <NavBar />
     <Component {...pageProps} />
-    <Footer />
+    {/* <Footer /> */}
   </div>
   )
 }
