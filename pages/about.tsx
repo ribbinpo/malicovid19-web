@@ -1,4 +1,4 @@
-import ecoSystemImage from "../public/EcoSystem.png"
+import ecoSystemImage from "../assets/EcoSystem.png"
 import Image from 'next/image'
 
 const about = ()=>{
