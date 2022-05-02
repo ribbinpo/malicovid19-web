@@ -17,11 +17,11 @@ const TableList = (props:tableListProps) =>{
   const { dataRank } = props.dataRank;
   return (
     <>
-      <tr className="sticky top-0 flex w-full bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+      {/* <tr className="sticky top-0 flex w-full bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
         <th scope="row" className="w-1/3 p-4 font-medium text-gray-900 dark:text-white">100</th>
         <td className="p-4 w-1/3">A</td>
         <td className="p-4 w-1/3">B</td>
-      </tr>
+      </tr> */}
       {dataRank.map((res:{ranking:string,province:string,cases:string},idx:number)=>(
       <tr key={idx} className="flex w-full bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
         <th scope="row" className="w-1/3 p-4 font-medium text-gray-900 dark:text-white">{res.ranking}</th>
@@ -58,9 +58,9 @@ const baba: NextPage = ({data,data2,ranking}:any) =>{
         ]
     };
     return (
-        <div className="flex flex-col h-screen"> 
+        <div className="flex flex-col"> 
             <div className="flex-grow px-2 pt-2">
-                <div className=" bg-zinc-50 rounded-lg h-screen text-center px-3">
+                <div className=" bg-zinc-50 rounded-lg text-center px-3">
                     <div className="text-right text-xs font-light pr-5 mb-2">Lastest Update: {data2.date}</div>
                     {/* Row1 General Information */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-2">

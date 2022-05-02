@@ -4,12 +4,32 @@ const model = () =>{
         <div className="bg-white shadow-sm rounded-md p-5 mb-3">
             <div className="text-5xl mb-2 text-center">MODEL</div>
             <hr className="mb-5" />
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, officia illo harum sit nam inventore quos adipisci voluptatem quasi voluptatum facilis est voluptates quidem aperiam vitae dicta explicabo sed ipsam!
-            </p>
+            <div className="sm:hidden">
+                {/* <label htmlFor="tabs" className="sr-only">Select your country</label>
+                <select id="tabs" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <option>Profile</option>
+                    <option>Canada</option>
+                    <option>France</option>
+                    <option>Germany</option>
+                </select> */}
+            </div>
+            <ul className="hidden text-sm font-medium text-center text-gray-500 rounded-lg divide-x divide-gray-200 shadow sm:flex dark:divide-gray-700 dark:text-gray-400">
+                {/* <li className="w-1/6">
+                    <a href="#" className="inline-block p-4 w-full text-gray-900 bg-gray-100 rounded-l-lg focus:ring-4 focus:ring-blue-300 active focus:outline-none dark:bg-gray-700 dark:text-white" aria-current="page">Profile</a>
+                </li> */}
+                {/* <li className="w-full">
+                    <a href="#" className="inline-block p-4 w-full bg-white hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Dashboard</a>
+                </li>
+                <li className="w-full">
+                    <a href="#" className="inline-block p-4 w-full bg-white hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Settings</a>
+                </li>
+                <li className="w-full">
+                    <a href="#" className="inline-block p-4 w-full bg-white rounded-r-lg hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Invoice</a>
+                </li> */}
+            </ul>
         </div>
         <div className="bg-white shadow-sm rounded-md p-5 mb-3">
-            <div className="text-xl">LSTM Model</div>
+            <div className="text-xl font-normal">LSTM Model</div>
             <hr className="mb-5" />
             <p className="antialiased leading-relaxed text-justify indent-8">
                 This API gives the number of covid-19 infected cases in the future using LSTM model. <span className=" text-red-500 font-bold hover:text-red-400">(7 days later) </span>
@@ -21,7 +41,7 @@ const model = () =>{
                     <tbody>
                         <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                             <td className="border border-slate-300 px-1 md:px-5 py-3 text-right w-1/4">HOST</td>
-                            <td className="border border-slate-300 px-1 md:px-5 py-3">http://157.245.53.86/api/covid19lstm</td>
+                            <td className="border border-slate-300 px-1 md:px-5 py-3">http://159.65.2.88/api/covid19lstm</td>
                         </tr>
                         <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                             <td className="border border-slate-300 px-1 md:px-5 py-3 text-right">METHOD</td>
@@ -85,33 +105,61 @@ const model = () =>{
             <div className="pl-5">
                 <div className="bg-slate-100 rounded-md p-2">
                     {/* data */}
-                    curl -v -H &quot;Host: ssense&quot; &quot;http://157.245.53.86/api/covid19lstm
+                    curl -v &quot;http://159.65.2.88/api/covid19lstm&quot;
                 </div>
             </div>
 
             <div className="mt-5">PHP</div>
             <div className="pl-5">
-                <div className="bg-slate-100 rounded-md p-2">
+                <div className="bg-slate-100 rounded-md p-2 list-none">
                     {/* data */}
-                    curl -v &quot;http://157.245.53.86/api/covid19lstm&quot;
+                    <li>&lt;?</li>
+                    <li>$curl = curl_init();</li>
+                    <li></li>
+                    <li>curl_setopt_array($curl, array(</li>
+                    <li className="indent-8">CURLOPT_URL =&gt; &quot;http://159.65.2.88/api/covid19lstm&quot;,</li>
+                    <li className="indent-8">CURLOPT_RETURNTRANSFER =&gt; true,</li>
+                    <li className="indent-8">CURLOPT_ENCODING =&gt; &quot;&quot;,</li>
+                    <li className="indent-8">CURLOPT_MAXREDIRS =&gt; 10,</li>
+                    <li className="indent-8">CURLOPT_TIMEOUT =&gt; 30,</li>
+                    <li className="indent-8">CURLOPT_HTTP_VERSION =&gt; CURL_HTTP_VERSION_1_1,</li>
+                    <li className="indent-8">CURLOPT_CUSTOMREQUEST =&gt; &quot;GET&quot;,</li>
+                    <li className="indent-8">CURLOPT_HTTPHEADER =&gt; array(</li>
+                    <li className="indent-8">)</li>
+                    <li>));</li>
+                    <li></li>
+                    <li>$response = curl_exec($curl);</li>
+                    <li>$err = curl_error($curl);</li>
+                    <li></li>
+                    <li>curl_close($curl);</li>
+                    <li></li>
+                    <li>if ($err)&#123;</li>
+                    <li className="indent-8">echo &quot;cURL Error #:&quot; . $err;</li>
+                    <li>&#125; else &#123;</li>
+                    <li className="indent-8">echo $response;</li>
+                    <li>&#125;</li>
+                    <li>?&gt;</li>
                 </div>
             </div>
 
             <div className="mt-5">Python</div>
             <div className="pl-5">
-                <div className="bg-slate-100 rounded-md p-2">
+                <div className="bg-slate-100 rounded-md p-2 list-none">
                     {/* data */}
-                    curl -v -H &quot;Host: ssense&quot; &quot;http://157.245.53.86/api/covid19lstm
+                    <li>import requests</li>
+                    <li>url = &quot;http://159.65.2.88/api/covid19lstm&quot;</li>
+                    <li>response = requests.get(url)</li>
+                    <li>print(response.json())</li>
                 </div>
             </div>
 
-            <div className="mt-5">JavaScript</div>
-            <div className="pl-5">
-                <div className="bg-slate-100 rounded-md p-2">
+            {/* <div className="mt-5">JavaScript</div> */}
+            {/* <div className="pl-5"> */}
+                {/* <div className="bg-slate-100 rounded-md p-2"> */}
                     {/* data */}
-                    curl -v -H &quot;Host: ssense&quot; &quot;http://157.245.53.86/api/covid19lstm
-                </div>
-            </div>
+                    {/* curl -v -H &quot;Host: ssense&quot; &quot;http://157.245.53.86/api/covid19lstm */}
+                {/* </div> */}
+            {/* </div> */}
             {/* PHP Python JS */}
         </div>
     </div>

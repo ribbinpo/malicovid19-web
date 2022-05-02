@@ -11,25 +11,25 @@ const contact = ()=>{
                 <hr className="mb-5" />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="col-auto border text-center py-3">
-                        <div className="mb-5">
+                        <div className="mb-7 mt-1">
                             <FontAwesomeIcon icon={faMapLocationDot} className="fa-solid fa-camera fa-4x mb-1" />
-                            <div>ADDRESS</div>
-                            <p className="px-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio enim ea maiores pariatur quod vitae nulla perferendis debitis eos minima. Tenetur officia</p>
+                            <div className="text-lg font-medium my-1">ADDRESS</div>
+                            <p className="px-3">78/83 Sol.4/7 Moo.2 Chaofa Rd. Wichit Mueang Phuket 83000</p>
                         </div>
-                        <div className="mb-5">
+                        <div className="mb-7">
                             <FontAwesomeIcon icon={faPaperPlane} className="fa-solid fa-camera fa-4x mb-1" />
-                            <div>EMAIL</div>
+                            <div className="text-lg font-medium my-1">E-MAIL</div>
                             <p>ribbinpo@gmail.com</p>
                             <p>s6230613020@phuket.psu.ac.th</p>
                         </div>
-                        <div className="mb-5">
+                        <div className="mb-7">
                             <FontAwesomeIcon icon={faSquarePhone} className="fa-solid fa-camera fa-4x mb-1" />
-                            <div>PHONE</div>
+                            <div className="text-lg font-medium my-1">PHONE</div>
                             <p>086-3210676</p>
                         </div>
                     </div>
                     <div className="col-auto px-5">
-                        <div>Send A Message</div>
+                        <div className="text-lg font-normal">Send a message</div>
                         <hr className="mb-5" />
                         <form action="">
                             <div className="mb-5">
