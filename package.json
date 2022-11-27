@@ -23,7 +23,7 @@
     "react-apexcharts": "^1.4.0",
     "react-circular-progressbar": "^2.1.0",
     "react-dom": "18.2.0",
-    "recharts": "^0.22.5"
+    "recharts": "^2.1.16"
   },
   "devDependencies": {
     "@types/node": "18.11.9",
