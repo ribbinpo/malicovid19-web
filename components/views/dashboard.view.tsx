@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { governPerWeekAPI, governPerProvinceAPI  } from 'api/govern';
+import { governPerWeekAPI, governPerProvinceAPI  } from 'pages/api/govern';
 import { PROVINCE_TH_TO_ENG } from 'constants/province';
 
 const DashboardView = () => {
@@ -9,7 +9,6 @@ const DashboardView = () => {
       const { data: covid19PerWeeks } = await governPerProvinceAPI();
       console.log(covid19PerWeek);
       console.log(covid19PerWeeks);
-      // console.log(PROVINCE_TH_TO_ENG[covid19PerWeeks[0]?.province || ""]);
     };
     fetchAPI();
   }, []);
