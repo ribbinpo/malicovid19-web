@@ -7,7 +7,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
   <div className="bg-slate-100 container-fluid">
     <NavBar />
-    <Component {...pageProps} />
+    <div className="px:auto sm:px-16 bg-zinc-50 h-screen">
+      <Component {...pageProps} />
+    </div>
     {/* <Footer /> */}
   </div>
   )
