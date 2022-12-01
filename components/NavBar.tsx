@@ -41,7 +41,7 @@ const NavBar = () =>{
                             <button
                                 onClick={() => setIsOpen(!isOpen)}
                                 type="button"
-                                className=" bg-cyan-700 inline-flex items-center justify-center p-2 rounded-md text-gray-200 hover:text-white hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-cyan-800 focus:ring-white"
+                                className=" bg-green-700 inline-flex items-center justify-center p-2 rounded-md text-gray-200 hover:text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-green-800 focus:ring-white"
                                 aria-controls="mobile-menu"
                                 aria-expanded="false"
                             >
@@ -108,7 +108,7 @@ const NavBar = () =>{
                                     <div className="px-5 py-1 hover:bg-green-500 hover:text-white hover:rounded-full cursor-pointer select-none rounded-md block text-base">Contact</div>
                                 </Link>
                                 <Link href="/lab">
-                                    <li className="px-5 py-1 rounded-full bg-green-500 text-white shadow-md cursor-pointer hover:bg-green-600 select-none">MaliCovid19-Lab</li>
+                                    <div className="px-5 py-1 rounded-full bg-green-500 text-white shadow-md cursor-pointer hover:bg-green-600 select-none">MaliCovid19-Lab</div>
                                 </Link>    
                             </div>
                         </div>

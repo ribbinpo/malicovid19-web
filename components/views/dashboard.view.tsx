@@ -36,7 +36,7 @@ const DashboardView = () => {
               <h5 className="text-gray-700 text-xl font-medium mb-2">
                 <BsPersonPlus /> Infected
               </h5>
-              <p className=" text-red-600 text-2xl pl-8 mt-5">
+              <p className=" text-sky-600 text-2xl pl-8 mt-5">
                 {item.new_case || 0}
               </p>
             </div>
@@ -60,7 +60,7 @@ const DashboardView = () => {
               <h5 className="text-gray-700 text-xl font-medium mb-2">
                 <MdPersonOff /> Recovered
               </h5>
-              <p className=" text-red-700 text-2xl pl-8 mt-5">
+              <p className=" text-green-700 text-2xl pl-8 mt-5">
                 {item.new_recovered || 0}
               </p>
             </div>
@@ -116,7 +116,7 @@ const DashboardView = () => {
               <h5 className="text-gray-700 text-xl font-medium mb-2">
                 <RiMentalHealthLine /> Total Infected
               </h5>
-              <p className=" text-green-700 text-2xl pl-8 mt-5">
+              <p className=" text-sky-600 text-2xl pl-8 mt-5">
                 {item.total_case || 0}
               </p>
             </div>
@@ -128,7 +128,7 @@ const DashboardView = () => {
               <h5 className="text-gray-700 text-xl font-medium mb-2">
                 <MdOutlineHealthAndSafety /> Total Death
               </h5>
-              <p className=" text-sky-600 text-2xl pl-8 mt-5">
+              <p className=" text-red-600 text-2xl pl-8 mt-5">
                 {item.total_death || 0}
               </p>
             </div>

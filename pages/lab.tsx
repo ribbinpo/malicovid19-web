@@ -1,7 +1,6 @@
+import LabView from "components/views/lab.view";
 const Lab = () => {
-  return (
-    <div>Lab</div>
-  );
+  return <LabView />;
 };
 
 export default Lab;
