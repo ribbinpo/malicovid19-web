@@ -4,28 +4,28 @@ import TableURL from "./table";
 const URL = [
   {
     title: 'SEIRD',
-    host: `${process.env.NEXT_PUBLIC_URL_BACKEND}/api/covid19lstm`,
+    host: `${process.env.NEXT_PUBLIC_URL_BACKEND}/api/seird/result`,
     method: 'GET',
     content: 'This API gives the number of covid-19 infected cases in the future using SEIRD model [Susceptible-Exposed-Infectious-Recovered-Death].',
-    parameter:'-'
+    parameter:'wave (integer 1-4)'
   },
   {
     title: 'SEIRDS',
-    host: `${process.env.NEXT_PUBLIC_URL_BACKEND}/api/covid19lstm`,
+    host: `${process.env.NEXT_PUBLIC_URL_BACKEND}/api/seirds/result`,
     method: 'GET',
     content: 'This API gives the number of covid-19 infected cases in the future using SEIRDS model [Susceptible-Exposed-Infectious-Recovered-Death-Susceptible].',
-    parameter:'-'
+    parameter:'wave (integer 1-4)'
   },
   {
     title: 'LSTM',
-    host: `${process.env.NEXT_PUBLIC_URL_BACKEND}/api/covid19lstm`,
+    host: `${process.env.NEXT_PUBLIC_URL_BACKEND}/api/lstm/result`,
     method: 'GET',
     content: 'This API gives the number of covid-19 infected cases in the future using LSTM model',
     parameter:'-'
   },
   {
     title: 'LSTM+SEIRD',
-    host: `${process.env.NEXT_PUBLIC_URL_BACKEND}/api/covid19lstm`,
+    host: `${process.env.NEXT_PUBLIC_URL_BACKEND}/api/lstm_seird/result`,
     method: 'GET',
     content: 'This API gives the number of covid-19 infected cases in the future using LSTM+SEIRD model',
     parameter:'-'
@@ -43,7 +43,7 @@ export default function ModelContent() {
               <h3 className="font-bold text-lg">{item.title}</h3>
               <div className="md:w-1/2">
               </div>
-              <TableURL host={item.host} method={item.method} />
+              <TableURL host={item.host} method={item.method} parameter={item?.parameter} />
               <p className="antialiased leading-relaxed text-justify indent-8">
                 {item.content}
               </p>
