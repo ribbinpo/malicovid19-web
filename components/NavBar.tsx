@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useState } from "react"
 import { Transition } from "@headlessui/react";
+import Image from 'next/image';
 const NavBar = () =>{
     const [isOpen, setIsOpen] = useState(false);
     return(
@@ -10,8 +11,9 @@ const NavBar = () =>{
                 <div className="px-4 sm:px-6 lg:px-8 w-full">
                     <div className="flex items-center justify-between w-full h-16">
                         <div className="flex justify-between items-center w-full">
-                            <div className="flex-shrink-0 text-xl text-black">
-                                <div className="cursor-default">MaliCovid19</div>
+                            <div className="flex items-center space-x-2 flex-shrink-0 text-xl text-black">
+                                <Image className="rounded-sm" src='/logo.jpg' alt="logo" width={30} height={30} quality={100} />
+                                <span className="cursor-default">MaliCovid19</span>
                             </div>
                             <div className="hidden md:block">
                                 <div className="ml-10 flex items-baseline space-x-4">
@@ -19,9 +21,9 @@ const NavBar = () =>{
                                     <Link href="/">
                                         <div className="px-5 py-1 hover:bg-green-500 hover:text-white hover:rounded-full cursor-pointer select-none rounded-md block text-base">Dashboard</div>
                                     </Link>
-                                    <Link href="/model">
+                                    {/* <Link href="/model">
                                         <div className="px-5 py-1 hover:bg-green-500 hover:text-white hover:rounded-full cursor-pointer select-none rounded-md block text-base">Model</div>
-                                    </Link>
+                                    </Link> */}
                                     <Link href="/about">
                                         <div className="px-5 py-1 hover:bg-green-500 hover:text-white hover:rounded-full cursor-pointer select-none rounded-md block text-base">About</div>
                                     </Link>
@@ -98,9 +100,9 @@ const NavBar = () =>{
                                 <Link href="/">
                                     <div className="px-5 py-1 hover:bg-green-500 hover:text-white hover:rounded-full cursor-pointer select-none rounded-md block text-base">Dashboard</div>
                                 </Link>
-                                <Link href="/model">
+                                {/* <Link href="/model">
                                     <div className="px-5 py-1 hover:bg-green-500 hover:text-white hover:rounded-full cursor-pointer select-none rounded-md block text-base">Model</div>
-                                </Link>
+                                </Link> */}
                                 <Link href="/about">
                                     <div className="px-5 py-1 hover:bg-green-500 hover:text-white hover:rounded-full cursor-pointer select-none rounded-md block text-base">About</div>
                                 </Link>

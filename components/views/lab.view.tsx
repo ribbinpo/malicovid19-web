@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Tab } from '@headlessui/react';
-import ResultContent from 'components/labs/results/content';
+import ModelContent from 'components/labs/models/content';
 import ExperimentContent from 'components/labs/experiments/content';
 
 function classNames(...classes: string[]) {
@@ -39,7 +39,7 @@ export default function LabView() {
                   )
                 }
               >
-                Results
+                Models
               </Tab>
             </Tab.List>
           </div>
@@ -58,7 +58,7 @@ export default function LabView() {
                 'rounded-xl bg-white p-3',
               )}
             >
-              <ResultContent />
+              <ModelContent />
             </Tab.Panel>
           </Tab.Panels>
         </div>

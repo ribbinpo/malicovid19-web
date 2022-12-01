@@ -14,7 +14,7 @@ const model = () =>{
                 (Input is sequence format). LSTM can know how should to write, delete or read memory using logical algorithms.
             </p>
             <div className="d-flex flex justify-center mb-2 mt-5 ">
-                <table className="md:w-6/12 text-sm text-left text-gray-500 dark:text-gray-400">
+                <table className="md:w-6/12 overflow-x-auto text-sm text-left text-gray-500 dark:text-gray-400">
                     <tbody>
                         <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                             <td className="border border-slate-300 px-1 md:px-5 py-3 text-right w-1/4">HOST</td>
