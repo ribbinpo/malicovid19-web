@@ -1,4 +1,4 @@
-import { governPerWeekAPI, governPerProvinceAPI  } from 'pages/api/govern';
+import { governPerWeekAPI, governPerProvinceAPI } from "pages/api/govern";
 import { useEffect, useState } from "react";
 import { PROVINCE_TH_TO_ENG } from "constants/province";
 import { BsPersonPlus } from "react-icons/bs";
@@ -22,20 +22,8 @@ const DashboardView = () => {
     const fetchAPI = async () => {
       const { data: covid19PerWeek } = await governPerWeekAPI();
       const { data: covid19PerWeeks } = await governPerProvinceAPI();
-      // console.log(covid19PerWeek);
-      // console.log(covid19PerWeeks);
-
-      // console.log(covid19PerWeek[0].new_case);
       setItem(covid19PerWeek[0]);
       setItems(covid19PerWeeks);
-      // console.log(item);
-      console.log(covid19PerWeeks);
-<<<<<<< HEAD
-=======
-      console.log(covid19PerWeek[0]);
-
-      // console.log(PROVINCE_TH_TO_ENG[covid19PerWeeks[0]?.province || ""]);
->>>>>>> df737498598f298e82d293d25ac747d682269b9c
     };
     fetchAPI();
   }, []);
@@ -107,7 +95,7 @@ const DashboardView = () => {
                 </thead>
                 <tbody>
                   {items.map((prop: any, i: React.Key) => (
-                    <tr className="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
+                    <tr key={i} className="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
                       <th
                         scope="row"
                         className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
