@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useState } from "react"
 import { Transition } from "@headlessui/react";
 import Image from 'next/image';
+import Logo from 'assets/logo.jpg';
 const NavBar = () =>{
     const [isOpen, setIsOpen] = useState(false);
     return(
@@ -12,7 +13,7 @@ const NavBar = () =>{
                     <div className="flex items-center justify-between w-full h-16">
                         <div className="flex justify-between items-center w-full">
                             <div className="flex items-center space-x-2 flex-shrink-0 text-xl text-black">
-                                <Image className="rounded-sm" src='/logo.jpg' alt="logo" width={30} height={30} quality={100} />
+                                <Image className="rounded-sm" src={Logo} alt="logo" width={30} height={30} quality={100} />
                                 <span className="cursor-default">MaliCovid19</span>
                             </div>
                             <div className="hidden md:block">
